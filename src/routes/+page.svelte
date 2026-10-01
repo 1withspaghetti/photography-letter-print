@@ -25,7 +25,7 @@
 	];
 
 	const text = new PersistedState('text', '');
-	const font = new PersistedState('font', 'Roboto');
+	const font = new PersistedState('font', 'SevenSegment');
 	const fontSize = new PersistedState('fontSize', 256);
 	const color = new PersistedState('color', '#ffffff');
 	const timeOn = new PersistedState('timeOn', 10);
