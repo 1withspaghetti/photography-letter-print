@@ -46,10 +46,14 @@
 	let running = $state(false);
 	let currentLetter = $state('');
 
+    function fullscreen() {
+        if (document.fullscreenElement == null) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+    }
+
 	async function run() {
 		currentLetter = '';
 		running = true;
-        document.documentElement.requestFullscreen();
 		await wait(padStart.current);
 		for (let i = 0; i < text.current.length; i++) {
 			currentLetter = text.current.charAt(i);
@@ -58,7 +62,6 @@
 			await wait(timeOff.current);
 		}
 		await wait(padEnd.current);
-        document.exitFullscreen()
 		running = false;
 	}
 </script>
@@ -117,6 +120,10 @@
 				<input type="number" bind:value={padEnd.current} class="mt-1 form-input block w-full" />
 			</label>
 		</div>
+        <button
+			class="bg-gray-300 px-4 py-2 font-bold transition hover:bg-gray-400"
+			onclick={fullscreen}>Fullscreen</button
+		>
 		<button
 			class="bg-blue-400 px-4 py-6 font-bold text-white transition hover:bg-blue-500"
 			onclick={run}>Run</button
