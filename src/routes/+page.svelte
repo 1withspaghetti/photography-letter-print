@@ -49,6 +49,7 @@
 	async function run() {
 		currentLetter = '';
 		running = true;
+        document.documentElement.requestFullscreen();
 		await wait(padStart.current);
 		for (let i = 0; i < text.current.length; i++) {
 			currentLetter = text.current.charAt(i);
@@ -57,6 +58,7 @@
 			await wait(timeOff.current);
 		}
 		await wait(padEnd.current);
+        document.exitFullscreen()
 		running = false;
 	}
 </script>
