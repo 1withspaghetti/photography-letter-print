@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@font-face {
+	src: url('/fonts/Audiowide-Regular.ttf');
+	font-family: Audiowide;
+}
+@font-face {
+	src: url('/fonts/PressStart2P-Regular.ttf');
+	font-family: PressStart2P;
+}
+@font-face {
+	src: url('/fonts/Seven-Segment.ttf');
+	font-family: SevenSegment;
+}
+@font-face {
+	src: url('/fonts/SpecialElite-Regular.ttf');
+	font-family: SpecialElite;
+}
+@font-face {
+	src: url('/fonts/StoryScript-Regular.ttf');
+	font-family: StoryScript;
+}
